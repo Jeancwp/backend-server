@@ -16,6 +16,6 @@ let urlDB;
 if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/mathbook';
 } else {
-    urlDB = 'mongodb+srv://jeancwp:ZQkRQCkb1fTVxHf2@cluster0-qe8wd.mongodb.net/mathbook?retryWrites=true&w=majority';
+    urlDB = process.env.MONGO_URI;
 }
 process.env.URLDB = urlDB;
